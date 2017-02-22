@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="jScript.js"></script>
+</head>
+<header> 
+
+	<title>
+			This is About JS
+	</title>
+</header>
+<body>
+
+<h1 class="title">Simple Diary</h1>
+<div id="panel" >
+<input  style="margin-left: 38%;" type="button" class="btn" name="addnew" value="Add New" onclick="addNewView()"> <br><br>
+<input  style="margin-left: 38%;" type="button" class="btn" name="view" value="View All" onclick="viewAllView()"> <br><br>
+</div>
+
+<div id="addForm" hidden="">
+	<input  style="margin-left: 38%;" type="text" class="fields" name="name" value="Enter Name"> <br><br>
+	<input  style="margin-left: 38%;" type="text" class="fields" name="age" value="Enter Age"> <br><br>
+	<input  style="margin-left: 38%;" type="button" class="btn" name="save" value="Save" onclick="addNew()"> <br><br>
+	<input  style="margin-left: 38%;" type="button" class="btn" name="save" value="Back" onclick="backHomeView()"> <br><br>
+</div>
+
+<div id="viewAll" hidden style="margin-left: 20%;"> 
+
+<table name="mainTable">
+  
+  </table><br><br>
+  <input  style="margin-left: 25%;" type="button" class="btn" name="back" value="Back" onclick="backHomeView()"> <br><br>
+</div>
+
+<div id="delete" hidden style="margin-left: 20%;"> 
+
+<table name="mainTable">
+  
+  </table><br><br>
+  <input  style="margin-left: 25%;" type="button" class="btn" name="back" value="Erase" onclick="backHomeView()"> <br><br>
+  <input  style="margin-left: 25%;" type="button" class="btn" name="back" value="Back" onclick="backHomeView()"> <br>
+</div>
+
+</body>
+</html>
