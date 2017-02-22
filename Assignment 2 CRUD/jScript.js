@@ -16,16 +16,23 @@ function addNewView() {
     document.getElementsByName("age")[0].value = "";
 }
 function addNew() {
-    document.getElementById("addForm").hidden = true;
-    document.getElementById("panel").hidden = false;
     var name = document.getElementsByName("name")[0].value;
     var age = document.getElementsByName("age")[0].value;
-    var x = new Friend(name,age);
-    if(fromEditView == 1) {
-    	mainArray[indexForEdit] = x;
-    	fromEditView = 0;
+    
+    if(name.length > 0 && age.length > 0) {
+        var x = new Friend(name,age);
+        if(fromEditView == 1) {
+            mainArray[indexForEdit] = x;
+            fromEditView = 0;
+        } else {
+            mainArray.push(x);
+        }
+
+        document.getElementById("addForm").hidden = true;
+        document.getElementById("panel").hidden = false;
+
     } else {
-    	mainArray.push(x);
+        alert("Please Fill All Fields Properply");
     }
 }
 
