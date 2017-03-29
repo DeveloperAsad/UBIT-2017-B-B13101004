@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+
+<link href="StyleSheet1.css" rel="stylesheet" />
+<script src="angular.min.js"></script>
+<script src="JavaScript.js"></script>
+
+<head>
+
+
+
+</head>
+<header>
+
+    <title>
+        This is About Angular TS
+    </title>
+</header>
+<body ng-controller="myController">
+
+    <h1 class="title">Simple Diary  </h1>
+    <div id="panel" name="Main Panel">
+        <input style="margin-left: 38%;" type="button" class="btn" name="addnew" value="Add New" ng-click="addNewView()"> <br><br>
+        <input style="margin-left: 38%;" type="button" class="btn" name="view" value="View All" ng-click="viewAllView()"> <br><br>
+    </div>
+
+    <div id="addForm" hidden="">
+        <input style="margin-left: 38%;" type="text" ng-model="Name" class="fields" name="name" value="Enter Name"> <br><br>
+        <input style="margin-left: 38%;" type="text" ng-model="Age" class="fields" name="age" value="Enter Age"> <br><br>
+        <input style="margin-left: 38%;" type="button" class="btn" name="save" value="Save" ng-click="addData()"> <br><br>
+        <input style="margin-left: 38%;" type="button" class="btn" name="save" value="Back" ng-click="backHomeView()"> <br><br>
+    </div>
+
+    <div id="viewAll" hidden style="margin-left: 20%;">
+
+        <table name="mainTable">
+            <tr><th>S #</th><th>Name</th><th>Age</th><th>Actions</th></tr>
+            <tr ng-repeat="student in students">
+                <td> {{$index + 1}}</td>
+                <td> {{student.Name}}</td>
+                <td> {{student.Age}} </td>
+                <td>
+                    <input type='image' src='delete.png' style='height:30px;width:30px;' name='deleteImage' value=" + i + " ng-click='deleteRow(student,$index)'>
+                    <input type='image' src='edit.png' style='height:30px;width:30px;' name='editImage' value=" + i + " ng-click='editRow(student,$index)'>
+                </td>
+            </tr>
+        </table>
+        <br /><br /><br />
+        <input style="margin-left: 25%;" type="button" class="btn" name="back" value="Back" ng-click="backHomeView()">
+    </div>
+
+</body>
+</html>
